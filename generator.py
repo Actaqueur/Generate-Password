@@ -1,11 +1,6 @@
-# generator password 
-
 import random
 import string
 import tkinter
-import os
-
-# password random generator gui
 
 def generate_password():
     password_min = 8
@@ -15,29 +10,23 @@ def generate_password():
     password_entry.delete(0, tkinter.END)
     password_entry.insert(0, password)
 
-# create window
 window = tkinter.Tk()
 window.title("Password Generator")
 window.geometry("500x300")
 window.config(background="white")
 
-# create frame
 frame = tkinter.Frame(window)
 frame.pack(expand=True)
 
-# create title
 title = tkinter.Label(frame, text="Password Generator", font=("Courrier", 25), bg="white")
 title.pack(expand=True)
 
-# create password entry
 password_entry = tkinter.Entry(frame, font=("Courrier", 25), bg="lightgrey")
 password_entry.pack(expand=True)
 
-# create button
 button = tkinter.Button(frame, text="Generate", font=("Courrier", 25), bg="lightgrey", command=generate_password)
 button.pack(expand=True)
 
-# launch window
 window.mainloop()
 
 
